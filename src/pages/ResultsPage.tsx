@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -8,11 +8,13 @@ import {
   LayoutDashboard, 
   RotateCcw,
   CheckCircle2,
-  FileCheck
+  FileCheck,
+  FileText
 } from 'lucide-react';
 import { useAssessment } from '../context/AssessmentContext';
 import { TopRecommendationCard } from '../components/results/TopRecommendationCard';
 import { FinancialCalculatorSection } from '../components/results/FinancialCalculatorSection';
+import { WhatIfSubsidySimulator } from '../components/results/WhatIfSubsidySimulator';
 import { ExplainabilitySection } from '../components/results/ExplainabilitySection';
 import { DocumentReadinessSection } from '../components/results/DocumentReadinessSection';
 import { ChannelPartnerSection } from '../components/results/ChannelPartnerSection';
@@ -20,6 +22,7 @@ import { ApplicationGuidanceTimeline } from '../components/results/ApplicationGu
 import { OtherSuitableSchemes } from '../components/results/OtherSuitableSchemes';
 import { SupportCentresModal } from '../components/SupportCentresModal';
 import { SchemeCompareModal } from '../components/SchemeCompareModal';
+import { RecommendationSlipModal } from '../components/results/RecommendationSlipModal';
 
 export const ResultsPage: React.FC = () => {
   const navigate = useNavigate();
@@ -33,6 +36,7 @@ export const ResultsPage: React.FC = () => {
   const [centresModalOpen, setCentresModalOpen] = useState(false);
   const [selectedDocForCentres, setSelectedDocForCentres] = useState<string | undefined>(undefined);
   const [compareModalOpen, setCompareModalOpen] = useState(false);
+  const [slipModalOpen, setSlipModalOpen] = useState(false);
   const [printNotice, setPrintNotice] = useState(false);
 
   const handleOpenCentres = (docName?: string) => {
@@ -91,6 +95,14 @@ export const ResultsPage: React.FC = () => {
           </button>
 
           <button
+            onClick={() => setSlipModalOpen(true)}
+            className="inline-flex items-center gap-1.5 bg-[#FF671F] hover:bg-[#e05817] text-white text-xs font-bold px-3.5 py-2 rounded-lg shadow-2xs transition"
+          >
+            <FileText className="w-3.5 h-3.5" />
+            <span>Official Advisory Slip</span>
+          </button>
+
+          <button
             onClick={handlePrint}
             className="inline-flex items-center gap-1.5 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold px-3 py-2 rounded-lg shadow-2xs transition"
           >
@@ -120,32 +132,38 @@ export const ResultsPage: React.FC = () => {
         profile={profile}
       />
 
-      {/* 3. Explainability Section (Why Recommended + Decomposition Bars) */}
+      {/* 3. What-If Subsidy Simulator */}
+      <WhatIfSubsidySimulator
+        scheme={topRecommendation.scheme}
+        profile={profile}
+      />
+
+      {/* 4. Explainability Section (Why Recommended + Decomposition Bars) */}
       <ExplainabilitySection
         matchResult={topRecommendation}
         profile={profile}
       />
 
-      {/* 4. Document Readiness & Missing Document Support (with Ambattur DIC route) */}
+      {/* 5. Document Readiness & Missing Document Support (with Ambattur DIC route) */}
       <DocumentReadinessSection
         scheme={topRecommendation.scheme}
         profile={profile}
         onOpenSupportCentres={handleOpenCentres}
       />
 
-      {/* 5. Recommended Channel Partner & Nearest Support Centre Preview */}
+      {/* 6. Recommended Channel Partner & Nearest Support Centre Preview */}
       <ChannelPartnerSection
         scheme={topRecommendation.scheme}
         profile={profile}
         onOpenCentresModal={() => handleOpenCentres()}
       />
 
-      {/* 6. Complete Application Guidance Roadmap Timeline */}
+      {/* 7. Complete Application Guidance Roadmap Timeline */}
       <ApplicationGuidanceTimeline
         scheme={topRecommendation.scheme}
       />
 
-      {/* 7. Other Suitable Schemes (Excluding Primary Top Match) */}
+      {/* 8. Other Suitable Schemes (Excluding Primary Top Match) */}
       <OtherSuitableSchemes
         results={rankedResults.slice(1)}
         onOpenCompareModal={() => setCompareModalOpen(true)}
@@ -162,6 +180,13 @@ export const ResultsPage: React.FC = () => {
       <SchemeCompareModal
         isOpen={compareModalOpen}
         onClose={() => setCompareModalOpen(false)}
+      />
+
+      <RecommendationSlipModal
+        isOpen={slipModalOpen}
+        onClose={() => setSlipModalOpen(false)}
+        matchResult={topRecommendation}
+        profile={profile}
       />
 
     </div>

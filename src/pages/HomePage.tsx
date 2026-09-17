@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -20,10 +20,12 @@ import {
 import { useAssessment } from '../context/AssessmentContext';
 import { MOCK_SCHEMES } from '../data/schemes';
 import { formatCompactINR } from '../utils/finance';
+import { TRANSLATIONS } from '../utils/translations';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
-  const { loadDemoPersona } = useAssessment();
+  const { loadDemoPersona, language } = useAssessment();
+  const t = TRANSLATIONS[language] || TRANSLATIONS.en;
 
   const handleLaunchPersona = (key: 'arun' | 'pooja' | 'ramesh') => {
     loadDemoPersona(key);
@@ -44,17 +46,17 @@ export const HomePage: React.FC = () => {
             {/* National Theme Trust Pill */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-900 text-xs font-semibold shadow-xs">
               <span className="w-2 h-2 rounded-full bg-[#FF671F]"></span>
-              <span>Smart India Hackathon 2026 Prototype • Problem SIH26092</span>
+              <span>{t.portalBadge}</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B2545] tracking-tight leading-tight">
-              Find the Right Government Scheme for Your Business
+              {t.heroHeading}
             </h1>
 
             {/* Supporting Text */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              JANSAHAY AI analyzes your business, financial profile and eligibility to identify suitable government support schemes and guide you toward the next steps.
+              {t.heroSub}
             </p>
 
             {/* Action Buttons */}
@@ -64,7 +66,7 @@ export const HomePage: React.FC = () => {
                 className="inline-flex items-center gap-2 bg-[#0B2545] hover:bg-[#134B70] text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
               >
                 <Sparkles className="w-5 h-5 text-amber-300" />
-                <span>Find My Scheme</span>
+                <span>{t.findMyScheme}</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
@@ -72,7 +74,7 @@ export const HomePage: React.FC = () => {
                 to="/schemes"
                 className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-semibold text-base px-6 py-3.5 rounded-xl shadow-xs hover:border-slate-400 transition"
               >
-                <span>Explore Schemes</span>
+                <span>{t.exploreSchemes}</span>
               </Link>
             </div>
 
