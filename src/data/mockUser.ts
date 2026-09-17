@@ -1,0 +1,197 @@
+﻿import { EntrepreneurProfile } from '../types';
+
+export const DEMO_PERSONA_ARUN: EntrepreneurProfile = {
+  fullName: 'Arun Kumar',
+  age: 32,
+  gender: 'Male',
+  state: 'Tamil Nadu',
+  district: 'Chennai',
+  city: 'Chennai',
+  pincode: '600058',
+  socialCategory: 'OBC',
+  specialCategory: 'None',
+  entrepreneurType: 'Existing Business Owner',
+
+  businessName: 'Sri Sai Packaged Foods & Condiments',
+  businessType: 'Food Processing',
+  businessStage: 'Expansion',
+  yearsInBusiness: 3,
+  employees: 6,
+  businessLocation: 'Urban',
+  businessDescription: 'Small-scale food processing and vacuum packaging unit preparing traditional snacks and spices for local retail distribution.',
+  annualTurnover: 1200000,
+
+  personalIncome: 450000,
+  businessRevenue: 1200000,
+  existingInvestment: 350000,
+  requiredFunding: 500000,
+  preferredLoanAmount: 500000,
+  preferredTenureYears: 5,
+  existingLoans: 'No',
+  monthlyExistingEmi: 0,
+  collateralAvailable: 'No',
+  creditHistory: 'Good',
+
+  availableDocuments: {
+    aadhaar: true,
+    pan: true,
+    bankAccount: true,
+    addressProof: true,
+    businessRegistration: true,
+    udyamRegistration: false, // Intentionally missing as per demo requirements
+    incomeProof: true,
+    bankStatement: true,
+    gstCertificate: false,
+    businessPlan: true,
+    casteCertificate: true,
+    disabilityCertificate: false,
+    projectReport: true
+  }
+};
+
+export const DEMO_PERSONA_POOJA: EntrepreneurProfile = {
+  fullName: 'Pooja Sharma',
+  age: 29,
+  gender: 'Female',
+  state: 'Rajasthan',
+  district: 'Jaipur',
+  city: 'Jaipur',
+  pincode: '302001',
+  socialCategory: 'General',
+  specialCategory: 'Women Entrepreneur',
+  entrepreneurType: 'New Entrepreneur',
+
+  businessName: 'Vedic Threads Handloom & Apparel',
+  businessType: 'Handicraft',
+  businessStage: 'New Business',
+  yearsInBusiness: 1,
+  employees: 4,
+  businessLocation: 'Semi-Urban',
+  businessDescription: 'Artisanal organic block printing and handloom clothing design working with local women craftswomen.',
+  annualTurnover: 450000,
+
+  personalIncome: 280000,
+  businessRevenue: 450000,
+  existingInvestment: 150000,
+  requiredFunding: 300000,
+  preferredLoanAmount: 300000,
+  preferredTenureYears: 4,
+  existingLoans: 'No',
+  monthlyExistingEmi: 0,
+  collateralAvailable: 'No',
+  creditHistory: 'Average',
+
+  availableDocuments: {
+    aadhaar: true,
+    pan: true,
+    bankAccount: true,
+    addressProof: true,
+    businessRegistration: false,
+    udyamRegistration: false,
+    incomeProof: true,
+    bankStatement: true,
+    gstCertificate: false,
+    businessPlan: true,
+    casteCertificate: false,
+    disabilityCertificate: false,
+    projectReport: false
+  }
+};
+
+export const DEMO_PERSONA_RAMESH: EntrepreneurProfile = {
+  fullName: 'Ramesh Yadav',
+  age: 41,
+  gender: 'Male',
+  state: 'Uttar Pradesh',
+  district: 'Varanasi',
+  city: 'Varanasi',
+  pincode: '221002',
+  socialCategory: 'OBC',
+  specialCategory: 'None',
+  entrepreneurType: 'Self-Employed',
+
+  businessName: 'Kashi Agro Services & Seed Processing',
+  businessType: 'Agriculture Allied',
+  businessStage: 'Existing Business',
+  yearsInBusiness: 4,
+  employees: 3,
+  businessLocation: 'Rural',
+  businessDescription: 'Mini grain grading and certified organic pulses processing unit catering to farmer producer collectives.',
+  annualTurnover: 850000,
+
+  personalIncome: 360000,
+  businessRevenue: 850000,
+  existingInvestment: 200000,
+  requiredFunding: 400000,
+  preferredLoanAmount: 400000,
+  preferredTenureYears: 5,
+  existingLoans: 'No',
+  monthlyExistingEmi: 0,
+  collateralAvailable: 'No',
+  creditHistory: 'Good',
+
+  availableDocuments: {
+    aadhaar: true,
+    pan: true,
+    bankAccount: true,
+    addressProof: true,
+    businessRegistration: true,
+    udyamRegistration: true,
+    incomeProof: true,
+    bankStatement: true,
+    gstCertificate: false,
+    businessPlan: false,
+    casteCertificate: true,
+    disabilityCertificate: false,
+    projectReport: false
+  }
+};
+
+export const EMPTY_PROFILE: EntrepreneurProfile = {
+  fullName: '',
+  age: 30,
+  gender: 'Male',
+  state: 'Tamil Nadu',
+  district: 'Chennai',
+  city: 'Chennai',
+  pincode: '600001',
+  socialCategory: 'General',
+  specialCategory: 'None',
+  entrepreneurType: 'New Entrepreneur',
+
+  businessName: '',
+  businessType: 'Manufacturing',
+  businessStage: 'New Business',
+  yearsInBusiness: 1,
+  employees: 2,
+  businessLocation: 'Urban',
+  businessDescription: '',
+  annualTurnover: 500000,
+
+  personalIncome: 300000,
+  businessRevenue: 500000,
+  existingInvestment: 100000,
+  requiredFunding: 500000,
+  preferredLoanAmount: 500000,
+  preferredTenureYears: 5,
+  existingLoans: 'No',
+  monthlyExistingEmi: 0,
+  collateralAvailable: 'No',
+  creditHistory: 'Good',
+
+  availableDocuments: {
+    aadhaar: true,
+    pan: true,
+    bankAccount: true,
+    addressProof: true,
+    businessRegistration: false,
+    udyamRegistration: false,
+    incomeProof: false,
+    bankStatement: false,
+    gstCertificate: false,
+    businessPlan: false,
+    casteCertificate: false,
+    disabilityCertificate: false,
+    projectReport: false
+  }
+};
