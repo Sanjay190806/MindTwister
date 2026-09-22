@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # 🇮🇳 JANSAHAY AI
 ### **AI-Powered Scheme Matching, Financial Planning & Channel Partner Routing**
@@ -195,6 +195,8 @@ $$\text{Net Burden} = ( \text{EMI} \times n ) - \text{Estimated Subsidy}$$
 ---
 
 ## 💻 Technical Architecture & Project Structure
+
+![JANSAHAY AI Architecture](architecture.png)
 
 ```
 JanSahay AI/
