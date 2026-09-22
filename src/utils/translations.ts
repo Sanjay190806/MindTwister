@@ -1,4 +1,4 @@
-﻿export interface TranslationStrings {
+export interface TranslationStrings {
   portalBadge: string;
   tagline: string;
   heroHeading: string;
@@ -21,8 +21,8 @@ export const TRANSLATIONS: Record<'en' | 'hi' | 'ta', TranslationStrings> = {
   en: {
     portalBadge: 'Smart India Hackathon 2026 Prototype • Problem SIH26092',
     tagline: 'AI-Powered Scheme Matching & Financial Planning',
-    heroHeading: 'Find the Right Government Scheme for Your Business',
-    heroSub: 'JANSAHAY AI analyzes your business, financial profile and eligibility to identify suitable government support schemes and guide you toward the next steps.',
+    heroHeading: 'Find the Right Government Scheme for You',
+    heroSub: 'JanSahay AI analyzes your profile, financial needs and eligibility to identify suitable government schemes.',
     findMyScheme: 'Find My Scheme',
     exploreSchemes: 'Explore Schemes',
     startAssessment: 'Start Assessment',
@@ -39,8 +39,8 @@ export const TRANSLATIONS: Record<'en' | 'hi' | 'ta', TranslationStrings> = {
   hi: {
     portalBadge: 'स्मार्ट इंडिया हैकथॉन 2026 प्रोटोटाइप • समस्या SIH26092',
     tagline: 'एआई-संचालित योजना चयन एवं वित्तीय योजना',
-    heroHeading: 'अपने व्यवसाय के लिए सही सरकारी योजना खोजें',
-    heroSub: 'जनसहाय एआई आपके व्यवसाय, वित्तीय प्रोफाइल और पात्रता का विश्लेषण करके उपयुक्त सरकारी सहायता योजनाओं की पहचान करता है और अगले कदमों का मार्गदर्शन करता है।',
+    heroHeading: 'आपके लिए सही सरकारी योजना खोजें',
+    heroSub: 'जनसहाय एआई उपयुक्त सरकारी योजनाओं की पहचान करने के लिए आपकी प्रोफाइल, वित्तीय आवश्यकताओं और पात्रता का विश्लेषण करता है।',
     findMyScheme: 'मेरी योजना खोजें',
     exploreSchemes: 'योजनाएं देखें',
     startAssessment: 'आकलन शुरू करें',
@@ -57,8 +57,8 @@ export const TRANSLATIONS: Record<'en' | 'hi' | 'ta', TranslationStrings> = {
   ta: {
     portalBadge: 'ஸ்மார்ட் இந்தியா ஹேக்கத்தான் 2026 மாதிரி • SIH26092',
     tagline: 'செயற்கை நுண்ணறிவு திட்டப் பொருத்தம் & நிதி திட்டமிடல்',
-    heroHeading: 'உங்கள் வணிகத்திற்கான சரியான அரசுத் திட்டத்தைக் கண்டறியுங்கள்',
-    heroSub: 'ஜன்சஹாய் ஏஐ உங்கள் வணிகம் மற்றும் நிதித் தகுதியை ஆய்வு செய்து பொருத்தமான அரசு உதவித் திட்டங்களை அடையாளம் கண்டு அடுத்த கட்டங்களுக்கு வழிகாட்டுகிறது.',
+    heroHeading: 'உங்களுக்கான சரியான அரசுத் திட்டத்தைக் கண்டறியுங்கள்',
+    heroSub: 'ஜன்சஹாய் ஏஐ பொருத்தமான அரசுத் திட்டங்களை அடையாளம் காண உங்கள் விவரக்குறிப்பு, நிதித் தேவைகள் மற்றும் தகுதியை ஆய்வு செய்கிறது.',
     findMyScheme: 'என் திட்டத்தைக் காண்க',
     exploreSchemes: 'திட்டங்களை ஆராய்க',
     startAssessment: 'மதிப்பீட்டைத் தொடங்குக',
